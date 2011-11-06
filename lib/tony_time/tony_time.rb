@@ -13,7 +13,7 @@ class TonyTime
   end
 
   def during_tony_time?
-    !is_weekend?(now) && now.hour == 16 && now.minute <= 10
+    !is_weekend?(now) && now.hour == 16 && now.minute <= 5
   end
 
   private

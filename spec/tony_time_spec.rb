@@ -43,22 +43,22 @@ describe TonyTime do
   end
 
   describe '#during_tony_time?' do
-    it "should return true if it's 0-10 minutes after Tony Time" do
-      (0..10).each do |minute|
+    it "should return true if it's 0-5 minutes after Tony Time" do
+      (0..5).each do |minute|
         setup_now(2011, 11, 3, 16, minute)
         @tony_time.during_tony_time?.should be_true
       end
     end
 
-    it "should return false if it's not 0-10 minutes after Tony Time" do
-      (11..59).each do |minute|
+    it "should return false if it's not 0-5 minutes after Tony Time" do
+      (6..59).each do |minute|
         setup_now(2011, 11, 3, 16, minute)
         @tony_time.during_tony_time?.should be_false
       end
     end
 
-    it "should return false if it's 0-10 minutes after Tony Time on the weekend" do
-      (0..10).each do |minute|
+    it "should return false if it's 0-5 minutes after Tony Time on the weekend" do
+      (0..5).each do |minute|
         setup_now(2011, 11, 6, 16, minute)
         @tony_time.during_tony_time?.should be_false
       end
