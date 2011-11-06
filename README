@@ -1,0 +1,9 @@
+tony_time is a Ruby *1.9.x* gem that driver tonyti.me
+
+"Tony Time" follows these rules:
+- Falls on 4PM
+- Not during the weekend
+
+It provides two instance methods:
+- next_tony_time: Returns the next available Tony Time in the form of a DateTime object.
+- during_tony_time?: Returns a boolean if the current time is 0-5 minutes after the current Tony Time.
