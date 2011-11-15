@@ -26,6 +26,6 @@ class TonyTime
   end
 
   def now
-    @now ||= DateTime.now
+    @now ||= DateTime.new(Time.now.year, Time.now.month, Time.now.day, Time.now.hour, Time.now.min, Time.now.sec)
   end
 end
